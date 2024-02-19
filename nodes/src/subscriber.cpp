@@ -19,14 +19,14 @@ class MinimalSubscriber : public rclcpp::Node
     }
 
   private:
-    void topic_callback_1(const std_msgs::msg::String & msg) const
+    void topic_callback_1(const std_msgs::msg::String::SharedPtr msg) const
     {
-      RCLCPP_WARN(this->get_logger(), "String Sub: '%s'", msg.data.c_str());
+      RCLCPP_WARN(this->get_logger(), "String Sub: '%s'", msg->data.c_str());
     }
 
-    void topic_callback_2(const std_msgs::msg::Int16 & msg) const
+    void topic_callback_2(const std_msgs::msg::Int16::SharedPtr msg) const
     {
-      RCLCPP_FATAL(this->get_logger(), "Int sub '%d'", msg.data);
+      RCLCPP_FATAL(this->get_logger(), "Int sub '%d'", msg->data);
     }
 
     rclcpp::Subscription<std_msgs::msg::String>::SharedPtr subscription_1;
