@@ -11,9 +11,9 @@ main ()
   pcl::PCDReader cloud_reader;
   pcl::PCDWriter cloud_writer;
 
-  std::string path="/home/luqman/ros2_ws/src/ros2_learners/point_cloud_perception/point_clouds/";
+  std::string path="/home/giri/Documents/Workspace/ws_humble/src/ros2_learners/point_clouds/";
   // Reading the cloud
-  cloud_reader.read (path+std::string("cloud.pcd"),*cloud);
+  cloud_reader.read (path+std::string("cloud_pcl_learn.pcd"),*cloud);
 
   std::cout<<"Source Cloud Points "<< cloud->width * cloud->height<< std::endl;
   // Voxel
