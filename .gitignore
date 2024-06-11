@@ -30,5 +30,4 @@
 *.exe
 *.out
 *.app
-point_cloud_perception/src/voxelizing.cpp
 point_clouds/cloud_pcl_learn.ply
